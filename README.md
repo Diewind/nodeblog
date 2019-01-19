@@ -14,8 +14,3 @@ Nodejs+express+mongodb+mongoose+swig+body-parser+cookies
 2. 运行根目录下的app.js
 3. 浏览器窗口打开localhost:8080
 
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
