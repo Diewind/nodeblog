@@ -1,0 +1,12 @@
+{%extends 'layout.html'%}
+{%block content%}
+<article class="post">
+	<div class="post-head">
+		<h1 class="post-title"><a href="/view/{{content._id.toString()}}">{{content.title}}</a></h1>
+		<div class="post-meta"><span class="author">作者：<a href="javascript:;" target="_blank">{{content.user.username}}</a></span>发布时间 • <time class="post-date" datetime="February 20, 2017 7:21 PM" title="February 20, 2017 7:21 PM">{{content.addTime|date('Y-m-d H:i:s',-8*60)}}</time><span>阅读：{{content.views}}</span><span>评论：10</span></div>
+	</div>
+	<div class="post-content">
+		{{content.content}}
+	</div>
+</article>
+{%endblock%}

@@ -1,0 +1,41 @@
+{%extends 'layout.html'%}
+{%block content%}
+{%for content in contents%}
+<article class="post">
+	<div class="post-head">
+		<h1 class="post-title"><a href="/view/{{content._id.toString()}}">{{content.title}}</a></h1>
+		<div class="post-meta"><span class="author">作者：<a href="javascript:;" target="_blank">{{content.user.username}}</a></span>发布时间 • <time class="post-date" datetime="February 20, 2017 7:21 PM" title="February 20, 2017 7:21 PM">{{content.addTime|date('Y-m-d H:i:s',-8*60)}}</time><span>阅读：{{content.views}}</span><span>评论：10</span></div>
+	</div>
+	<!--<div class="featured-media">
+		<a href="/post/laravel-5-5-will-be-the-next-lts-release/"><img src="http://image.golaravel.com/b/60/0540baaed781628b02aac992d1c8f.png" alt="Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布"></a>
+	</div>-->
+	<div class="post-content">
+		<p></p>
+		<p>{{content.description}}</p>
+		<p></p>
+	</div>
+	<div class="post-permalink">
+		<a href="/view?contentid={{content._id.toString()}}" class="btn btn-default">阅读全文</a>
+	</div>
+	<footer class="post-footer clearfix"></footer>
+</article>
+{%endfor%}
+<nav class="pagination" role="navigation">
+	{% if page <= 1 %}
+	<a class="older-posts" href="javascript:;" style="opacity: 0.8;"><i class="fa fa-angle-left"></i></a>
+	{% else %}
+	<a class="older-posts" href="/?category={{category}}&page={{page-1}}"><i class="fa fa-angle-left"></i></a>
+	{% endif %}
+	{% if pages >0 %}
+	<span class="page-number">第 {{page}} 页 / 共 {{pages}} 页</span>
+	{% else%}
+	<span class="page-number">当前栏目没有内容！</span>
+	{%endif%}
+	{% if page >= pages %}
+	<a class="older-posts" href="javascript:;" style="opacity: 0.8;"><i class="fa fa-angle-right"></i></a>
+	{% else %}
+	<a class="older-posts" href="/?category={{category}}&page={{page+1}}"><i class="fa fa-angle-right"></i></a>
+	{% endif %}
+
+</nav>
+{%endblock%}
