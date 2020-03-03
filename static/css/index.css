@@ -1,0 +1,39 @@
+/*
+* @Author: Marte
+* @Date:   2019-01-10 12:07:26
+* @Last Modified by:   Marte
+* @Last Modified time: 2019-01-10 22:48:44
+*/
+
+a {
+    color: #428bca;;
+    outline: 0;
+}
+a:hover{
+    color:#2a72a2;
+}
+.presentation:hover{
+    color:#2a72a2;
+}
+.main-header{
+    background:#fff;
+	background-image: url(../images/topbg.jpg);
+	padding-top: 62px;
+    padding-bottom: 62px;
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.main-header p{
+    color:#fff;
+}
+
+.main-header .btn-doc{
+    border: 1px solid #f5f5f5;
+}
+.main-header .btn-default:hover{
+    border: 1px solid #428bca;
+    background: rgba(0,0,0,0);
+    color:#fff;
+}
