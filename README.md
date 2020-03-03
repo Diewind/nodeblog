@@ -11,8 +11,9 @@ Nodejs+express+mongodb+mongoose+swig+body-parser+cookies
 #### 安装教程
 
 1. git clone 地址
-2. 运行根目录下的app.js
-3. 浏览器窗口打开localhost:8080
+2. npm install
+3. 运行根目录下的app.js
+4. 浏览器窗口打开localhost:8080
 
 
 ## 开启mongodb数据库方法
